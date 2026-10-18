@@ -1,19 +1,15 @@
 {
-  "comment": "Public rulebook. Anchor on STABLE attributes (href, aria-label, inline-style keys), never rotating class names. A rule may carry an optional 'path' (and 'match':'exact') to apply only on certain URLs.",
-  "version": 2,
+  "comment": "Public rulebook. Anchor on STABLE attributes, never rotating class names. 'hide' = CSS-hide elements (optional 'path'/'match'). 'redirect' = block whole pages by path prefix (or 'match':'exact'); 'to' is where to send someone who lands there.",
+  "version": 3,
   "sites": {
     "instagram.com": {
       "hide": [
-        {
-          "name": "Reels tab",
-          "selector": "a[href='/reels/']"
-        },
-        {
-          "name": "Explore discovery grid",
-          "selector": "div[style*='gridTemplateColumns']",
-          "path": "/explore/",
-          "match": "exact"
-        }
+        { "name": "Reels tab", "selector": "a[href='/reels/']" },
+        { "name": "Explore discovery grid", "selector": "div[style*='gridTemplateColumns']", "path": "/explore/", "match": "exact" }
+      ],
+      "redirect": [
+        { "name": "Reels player/page", "path": "/reels/", "to": "/" },
+        { "name": "Reel permalink", "path": "/reel/", "to": "/" }
       ]
     }
   }
