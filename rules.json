@@ -4,7 +4,8 @@
   "sites": {
     "instagram.com": {
       "hide": [
-        { "name": "Reels tab", "selector": "a[href='/reels/']" }
+        { "name": "Reels tab", "selector": "a[href='/reels/']" },
+        { "name": "Explore tab", "selector": "a[href='/explore/']" }
       ]
     }
   }
