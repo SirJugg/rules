@@ -1,10 +1,19 @@
 {
-  "comment": "The RULEBOOK. This is the part that will one day be public and community-maintained (your 'EasyList for social feeds'). Anchor on STABLE attributes like href, never on Instagram's rotating class names.",
-  "version": 1,
+  "comment": "Public rulebook. Anchor on STABLE attributes (href, aria-label, inline-style keys), never rotating class names. A rule may carry an optional 'path' (and 'match':'exact') to apply only on certain URLs.",
+  "version": 2,
   "sites": {
     "instagram.com": {
       "hide": [
-        { "name": "Reels tab", "selector": "a[href='/reels/']" }
+        {
+          "name": "Reels tab",
+          "selector": "a[href='/reels/']"
+        },
+        {
+          "name": "Explore discovery grid",
+          "selector": "div[style*='gridTemplateColumns']",
+          "path": "/explore/",
+          "match": "exact"
+        }
       ]
     }
   }
