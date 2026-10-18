@@ -1,0 +1,11 @@
+{
+  "comment": "The RULEBOOK. This is the part that will one day be public and community-maintained (your 'EasyList for social feeds'). Anchor on STABLE attributes like href, never on Instagram's rotating class names.",
+  "version": 1,
+  "sites": {
+    "instagram.com": {
+      "hide": [
+        { "name": "Reels tab", "selector": "a[href='/reels/']" }
+      ]
+    }
+  }
+}
